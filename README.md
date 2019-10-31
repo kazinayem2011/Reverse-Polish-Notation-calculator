@@ -42,5 +42,5 @@ python3 manage.py runserver
 
 Browse url with:
 ```
-http://localhost:8000
+http://localhost:8000/calc/start/
 ```
