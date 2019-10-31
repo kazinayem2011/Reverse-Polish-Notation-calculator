@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        Example of input : 5 8 2 15 * sin * + 2 45 tan + /
+        <br><br>
+        <form class="login-form" action="" method="post">
+            {% csrf_token %}
+            <input type="text" name="equation" placeholder="1 2 + 3 *">
+            <button type="submit" class="btn green pull-right"> Calculate </button>
+
+        </form>
+
+        {% if messages %}
+            {% for message in messages %}
+                <span style="display: block; color: red">{{message.message}}</span>
+            {% endfor %}
+        {% endif %}
+
+        <span style="display: block">Output of calculation: {{ answer }}</span>
+    </body>
+</html>
